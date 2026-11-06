@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Shahanaz Indian Dance Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0806;
+    color:#f3eee4;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.gold-line{
+    height:3px;
+    background:#c9a968;
+    width:100%;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:absolute;
+    top:3px;
+    left:0;
+    width:100%;
+    z-index:20;
+    padding:28px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:linear-gradient(
+        to bottom,
+        rgba(5,4,3,.9),
+        rgba(5,4,3,.35),
+        transparent
+    );
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    font-size:20px;
+    letter-spacing:3px;
+    color:#e4c982;
+}
+
+.logo span{
+    display:block;
+    font-family:'Montserrat',sans-serif;
+    font-size:8px;
+    letter-spacing:4px;
+    color:#ddd2bd;
+    margin-top:5px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+nav a{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#eee7d9;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d6b66e;
+}
+
+.nav-enroll{
+    padding:11px 20px;
+    border:1px solid #c9a968;
+    color:#e4c982 !important;
+    background:transparent;
+    transition:.3s;
+}
+
+.nav-enroll:hover{
+    background:#c9a968;
+    color:#100c08 !important;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    overflow:hidden;
+    background:#080604;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+
+    background-image:
+    linear-gradient(
+        rgba(8,6,4,.38),
+        rgba(8,6,4,.76)
+    ),
+    url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKDf8GBV3UCodrq2Y86FH3JGCAfHDV4IslVF-ssfLf0J9ebUpw52lnCNXATpKasLVDwgx6fErAkWG8Spy0wbZNBbgg4r4isdm1S9MuOm_t8cPO_AwCnIYG2ldpe9zGIBv1jGZROnY1Cie2/s1600/navratri18.jpg");
+
+    background-size:cover;
+    background-position:center;
+    filter:saturate(.9);
+    transform:scale(1.03);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:950px;
+    padding:40px 25px;
+}
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#d9bc76;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+    font-size:clamp(45px,8vw,105px);
+    font-weight:500;
+    letter-spacing:8px;
+    line-height:1;
+    margin-bottom:25px;
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(24px,3vw,38px);
+    font-weight:300;
+    font-style:italic;
+    color:#eee5d5;
+}
+
+.hero-bottom{
+    position:absolute;
+    bottom:35px;
+    left:50%;
+    transform:translateX(-50%);
+    font-size:9px;
+    letter-spacing:4px;
+    color:#c9a968;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    padding:120px 10%;
+    text-align:center;
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(201,169,104,.08),
+        transparent 55%
+    ),
+    #0b0907;
+}
+
+.section-number{
+    font-family:'Cinzel',serif;
+    font-size:12px;
+    color:#c9a968;
+    letter-spacing:3px;
+    margin-bottom:20px;
+}
+
+.intro h2{
+    font-family:'Cinzel',serif;
+    font-size:clamp(32px,5vw,60px);
+    font-weight:400;
+    letter-spacing:3px;
+    margin-bottom:25px;
+}
+
+.intro p{
+    max-width:760px;
+    margin:auto;
+    font-family:'Cormorant Garamond',serif;
+    font-size:23px;
+    line-height:1.7;
+    color:#cfc5b5;
+}
+
+/* ================= MAIN SECTIONS ================= */
+
+.gallery-section{
+    padding:110px 7%;
+    position:relative;
+}
+
+.section-header{
+    max-width:850px;
+    margin-bottom:65px;
+}
+
+.section-label{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#c9a968;
+    margin-bottom:18px;
+}
+
+.section-header h2{
+    font-family:'Cinzel',serif;
+    font-size:clamp(34px,5vw,65px);
+    font-weight:400;
+    line-height:1.1;
+    margin-bottom:22px;
+}
+
+.section-header p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    line-height:1.6;
+    color:#cfc5b5;
+}
+
+/* ================= PERFORMANCE ================= */
+
+.performance{
+    background:#100d09;
+}
+
+.performance-grid{
+    display:grid;
+    grid-template-columns:1.35fr .65fr;
+    gap:30px;
+    align-items:stretch;
+}
+
+.performance-card{
+    position:relative;
+    min-height:600px;
+    overflow:hidden;
+    border:1px solid rgba(201,169,104,.28);
+}
+
+.performance-card img{
+    height:100%;
+    object-fit:cover;
+    transition:transform 1s ease;
+}
+
+.performance-card:hover img{
+    transform:scale(1.05);
+}
+
+.performance-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(5,4,3,.9),
+        rgba(5,4,3,.1) 65%
+    );
+}
+
+.performance-info{
+    position:absolute;
+    z-index:2;
+    bottom:35px;
+    left:35px;
+    right:35px;
+}
+
+.performance-info span{
+    font-size:9px;
+    letter-spacing:3px;
+    color:#d7b96e;
+}
+
+.performance-info h3{
+    font-family:'Cinzel',serif;
+    font-size:29px;
+    font-weight:400;
+    margin:10px 0;
+}
+
+.performance-info p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    line-height:1.5;
+    color:#ddd2c1;
+}
+
+/* ================= PRACTICE ================= */
+
+.practice{
+    background:#e9e0d1;
+    color:#17120d;
+}
+
+.practice .section-header p{
+    color:#5d5142;
+}
+
+.practice-layout{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:50px;
+    align-items:center;
+}
+
+.practice-image{
+    height:600px;
+    overflow:hidden;
+}
+
+.practice-image img{
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+.practice-copy{
+    padding:20px;
+}
+
+.practice-copy .small-title{
+    font-size:10px;
+    letter-spacing:4px;
+    color:#9a783c;
+    margin-bottom:20px;
+}
+
+.practice-copy h3{
+    font-family:'Cinzel',serif;
+    font-size:clamp(30px,4vw,52px);
+    font-weight:400;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.practice-copy p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:21px;
+    line-height:1.7;
+    color:#51483c;
+    margin-bottom:20px;
+}
+
+.practice-list{
+    margin-top:30px;
+    border-top:1px solid rgba(80,65,45,.25);
+}
+
+.practice-list div{
+    padding:15px 0;
+    border-bottom:1px solid rgba(80,65,45,.25);
+    display:flex;
+    justify-content:space-between;
+    font-size:10px;
+    letter-spacing:2px;
+}
+
+.practice-list span:last-child{
+    color:#94743c;
+}
+
+/* ================= MOMENTS ================= */
+
+.moments{
+    background:#0b0907;
+}
+
+.moments-intro{
+    max-width:700px;
+    margin-bottom:65px;
+}
+
+.moments-intro h3{
+    font-family:'Cinzel',serif;
+    font-size:38px;
+    font-weight:400;
+    margin-bottom:18px;
+}
+
+.moments-intro p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:21px;
+    line-height:1.7;
+    color:#cfc5b5;
+}
+
+/* Event cards */
+
+.events{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    gap:24px;
+}
+
+.event-card{
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(201,169,104,.25);
+    background:#11100d;
+}
+
+.event-card img{
+    width:100%;
+    height:100%;
+    min-height:330px;
+    object-fit:cover;
+    transition:transform 1s ease;
+}
+
+.event-card:hover img{
+    transform:scale(1.06);
+}
+
+.event-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(4,3,2,.95),
+        rgba(4,3,2,.05) 70%
+    );
+}
+
+.event-one{
+    grid-column:span 7;
+    min-height:520px;
+}
+
+.event-two{
+    grid-column:span 5;
+    min-height:520px;
+}
+
+.event-three{
+    grid-column:span 4;
+    min-height:440px;
+}
+
+.event-four{
+    grid-column:span 4;
+    min-height:440px;
+}
+
+.event-five{
+    grid-column:span 4;
+    min-height:440px;
+}
+
+.event-info{
+    position:absolute;
+    z-index:3;
+    left:28px;
+    right:28px;
+    bottom:28px;
+}
+
+.event-tag{
+    display:inline-block;
+    padding:6px 10px;
+    border:1px solid rgba(220,194,133,.55);
+    font-size:8px;
+    letter-spacing:2px;
+    color:#e2c786;
+    margin-bottom:12px;
+}
+
+.event-info h3{
+    font-family:'Cinzel',serif;
+    font-size:25px;
+    font-weight:400;
+    margin-bottom:10px;
+}
+
+.event-info p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    line-height:1.5;
+    color:#d8cdbc;
+}
+
+/* ================= EVENT STORY ================= */
+
+.event-story{
+    margin-top:80px;
+    padding:65px;
+    border-top:1px solid rgba(201,169,104,.35);
+    border-bottom:1px solid rgba(201,169,104,.35);
+    display:grid;
+    grid-template-columns:.35fr 1fr;
+    gap:60px;
+}
+
+.event-story-number{
+    font-family:'Cinzel',serif;
+    color:#c9a968;
+    font-size:15px;
+    letter-spacing:3px;
+}
+
+.event-story h3{
+    font-family:'Cinzel',serif;
+    font-weight:400;
+    font-size:38px;
+    margin-bottom:20px;
+}
+
+.event-story p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:21px;
+    line-height:1.7;
+    color:#cfc5b5;
+}
+
+/* ================= HERITAGE ================= */
+
+.heritage{
+    background:#16110b;
+}
+
+.heritage-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.heritage-card{
+    position:relative;
+    height:520px;
+    overflow:hidden;
+}
+
+.heritage-card img{
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.heritage-card:hover img{
+    transform:scale(1.06);
+}
+
+.heritage-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to top,
+        rgba(7,5,3,.85),
+        transparent 65%
+    );
+}
+
+.heritage-info{
+    position:absolute;
+    z-index:2;
+    left:25px;
+    right:25px;
+    bottom:25px;
+}
+
+.heritage-info span{
+    color:#d2b56d;
+    font-size:9px;
+    letter-spacing:3px;
+}
+
+.heritage-info h3{
+    font-family:'Cinzel',serif;
+    font-weight:400;
+    font-size:25px;
+    margin:10px 0;
+}
+
+.heritage-info p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:18px;
+    line-height:1.5;
+    color:#d9cdbb;
+}
+
+/* ================= QUOTE ================= */
+
+.quote{
+    padding:150px 10%;
+    text-align:center;
+    background:
+    linear-gradient(
+        rgba(10,8,6,.88),
+        rgba(10,8,6,.94)
+    ),
+    url("https://www.jaihindhphotography.com/wp-content/uploads/2020/02/Bharatanatyam-Arangetram-131-662x1024.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.quote-line{
+    width:55px;
+    height:1px;
+    background:#c9a968;
+    margin:0 auto 35px;
+}
+
+.quote p{
+    max-width:900px;
+    margin:auto;
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(30px,4vw,52px);
+    font-style:italic;
+    line-height:1.3;
+    color:#eee4d3;
+}
+
+.quote small{
+    display:block;
+    margin-top:30px;
+    font-size:9px;
+    letter-spacing:4px;
+    color:#c9a968;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:110px 8%;
+    text-align:center;
+    background:#080705;
+}
+
+.cta h2{
+    font-family:'Cinzel',serif;
+    font-size:clamp(35px,5vw,65px);
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+.cta p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:22px;
+    color:#cfc5b5;
+    margin-bottom:35px;
+}
+
+.cta-button{
+    display:inline-block;
+    padding:16px 30px;
+    border:1px solid #c9a968;
+    color:#e4c982;
+    font-size:10px;
+    letter-spacing:3px;
+    transition:.3s;
+}
+
+.cta-button:hover{
+    background:#c9a968;
+    color:#100c08;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid rgba(201,169,104,.25);
+    padding:50px 7%;
+    background:#050403;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.footer-logo{
+    font-family:'Cinzel',serif;
+    color:#d9bc76;
+    letter-spacing:3px;
+    font-size:18px;
+}
+
+footer p{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#81796c;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    header{
+        padding:22px 5%;
+    }
+
+    .logo{
+        font-size:15px;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    nav a{
+        font-size:8px;
+        letter-spacing:1px;
+    }
+
+    .nav-enroll{
+        padding:8px 12px;
+    }
+
+    .performance-grid{
+        grid-template-columns:1fr;
+    }
+
+    .practice-layout{
+        grid-template-columns:1fr;
+    }
+
+    .practice-image{
+        height:500px;
+    }
+
+    .events{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .event-one,
+    .event-two,
+    .event-three,
+    .event-four,
+    .event-five{
+        grid-column:span 1;
+        min-height:420px;
+    }
+
+    .event-story{
+        grid-template-columns:1fr;
+        gap:25px;
+        padding:40px 0;
+    }
+
+    .heritage-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:600px){
+
+    header{
+        position:absolute;
+        padding:18px 5%;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px 14px;
+    }
+
+    nav a{
+        font-size:7px;
+    }
+
+    .hero{
+        min-height:90vh;
+    }
+
+    .hero h1{
+        letter-spacing:4px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    .intro,
+    .gallery-section,
+    .cta{
+        padding:80px 6%;
+    }
+
+    .intro p,
+    .section-header p,
+    .moments-intro p,
+    .practice-copy p{
+        font-size:19px;
+    }
+
+    .performance-card{
+        min-height:450px;
+    }
+
+    .practice-image{
+        height:420px;
+    }
+
+    .events{
+        grid-template-columns:1fr;
+    }
+
+    .event-one,
+    .event-two,
+    .event-three,
+    .event-four,
+    .event-five{
+        grid-column:span 1;
+        min-height:400px;
+    }
+
+    .heritage-card{
+        height:450px;
+    }
+
+    .quote{
+        padding:100px 7%;
+        background-attachment:scroll;
+    }
+
+    footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="gold-line"></div>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <a href="home.html" class="logo">
+        SHAHANAZ
+        <span>INDIAN DANCE ACADEMY</span>
+    </a>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programs.html">PROGRAMS</a>
+        <a href="classes.html">CLASSES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="contact.html" class="nav-enroll">ENROLL</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            THE SHAHANAZ ARCHIVE
+        </div>
+
+        <h1>GALLERY</h1>
+
+        <h2>
+            Where Every Movement Becomes A Memory
+        </h2>
+
+    </div>
+
+    <div class="hero-bottom">
+        SCROLL TO EXPLORE
+    </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro">
+
+    <div class="section-number">
+        00 / THE ARCHIVE
+    </div>
+
+    <h2>A Journey Told Through Dance</h2>
+
+    <p>
+        Some moments are rehearsed. Some happen only once.
+        Our gallery brings together the performances, celebrations,
+        practice sessions and traditions that shape the journey of
+        every dancer at Shahanaz Indian Dance Academy.
+    </p>
+
+</section>
+
+
+<!-- ================= PERFORMANCE ================= -->
+
+<section class="gallery-section performance">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            01 / THE STAGE
+        </div>
+
+        <h2>The Stage Comes Alive</h2>
+
+        <p>
+            A performance is more than movement. It is the meeting
+            point of music, expression, costume, rhythm and the
+            dancer's complete presence.
+        </p>
+
+    </div>
+
+    <div class="performance-grid">
+
+        <div class="performance-card">
+
+            <img
+            src="https://www.hclconcerts.com/wp-content/uploads/2026/05/image-2026-05-19T155744.368.png"
+            alt="Kuchipudi dance performance">
+
+            <div class="performance-info">
+
+                <span>CLASSICAL PERFORMANCE</span>
+
+                <h3>Devotion In Motion</h3>
+
+                <p>
+                    Kuchipudi brings together expressive storytelling,
+                    rhythmic movement and dramatic presence. Every
+                    gesture becomes part of a larger story.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="performance-card">
+
+            <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/070/861/711/small/graceful-indian-woman-dancing-in-traditional-attire-photo.jpg"
+            alt="Indian classical dancer">
+
+            <div class="performance-info">
+
+                <span>EXPRESSION</span>
+
+                <h3>Grace In Every Gesture</h3>
+
+                <p>
+                    The smallest movement can communicate an entire
+                    emotion when technique and expression come together.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PRACTICE ================= -->
+
+<section class="gallery-section practice">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            02 / THE PRACTICE
+        </div>
+
+        <h2>Before The Applause, There Is Practice.</h2>
+
+        <p>
+            Every beautiful performance begins quietly — with repetition,
+            correction, discipline and countless hours of focused practice.
+        </p>
+
+    </div>
+
+    <div class="practice-layout">
+
+        <div class="practice-image">
+
+            <img
+            src="https://i.pinimg.com/736x/00/1c/72/001c72992f743b7deefaa65937deee6d.jpg"
+            alt="Kathak dancer">
+
+        </div>
+
+        <div class="practice-copy">
+
+            <div class="small-title">
+                THE DANCER'S JOURNEY
+            </div>
+
+            <h3>
+                Technique Becomes Instinct.
+            </h3>
+
+            <p>
+                In every class, dancers learn to listen to rhythm,
+                control their movement and understand the language
+                of their chosen dance form.
+            </p>
+
+            <p>
+                Progress is not measured only by performance.
+                It is found in the posture that becomes stronger,
+                the rhythm that becomes natural and the expression
+                that becomes more confident.
+            </p>
+
+            <div class="practice-list">
+
+                <div>
+                    <span>POSTURE</span>
+                    <span>01</span>
+                </div>
+
+                <div>
+                    <span>FOOTWORK</span>
+                    <span>02</span>
+                </div>
+
+                <div>
+                    <span>RHYTHM</span>
+                    <span>03</span>
+                </div>
+
+                <div>
+                    <span>EXPRESSION</span>
+                    <span>04</span>
+                </div>
+
+                <div>
+                    <span>CONFIDENCE</span>
+                    <span>05</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MOMENTS ================= -->
+
+<section class="gallery-section moments">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            03 / THE CELEBRATIONS
+        </div>
+
+        <h2>Moments We Gather For</h2>
+
+        <p>
+            Dance becomes even more meaningful when it is shared.
+            These moments celebrate culture, community, achievement
+            and the joy of performing together.
+        </p>
+
+    </div>
+
+
+    <div class="events">
+
+        <!-- EVENT 1 -->
+
+        <article class="event-card event-one">
+
+            <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKDf8GBV3UCodrq2Y86FH3JGCAfHDV4IslVF-ssfLf0J9ebUpw52lnCNXATpKasLVDwgx6fErAkWG8Spy0wbZNBbgg4r4isdm1S9MuOm_t8cPO_AwCnIYG2ldpe9zGIBv1jGZROnY1Cie2/s1600/navratri18.jpg"
+            alt="Navratri Garba celebration">
+
+            <div class="event-info">
+
+                <div class="event-tag">
+                    FESTIVAL
+                </div>
+
+                <h3>Navratri & Garba</h3>
+
+                <p>
+                    A celebration filled with rhythm, colour and
+                    community — where dance becomes a shared expression
+                    of joy and tradition.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENT 2 -->
+
+        <article class="event-card event-two">
+
+            <img
+            src="https://i.pinimg.com/564x/54/84/12/5484120eba920bb95f9552e8d76f2dd9.jpg"
+            alt="Traditional Indian dance">
+
+            <div class="event-info">
+
+                <div class="event-tag">
+                    CULTURAL MOMENT
+                </div>
+
+                <h3>Celebrating Tradition</h3>
+
+                <p>
+                    Moments like these remind us that Indian dance
+                    belongs not only to the stage, but also to the
+                    communities and traditions that keep it alive.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENT 3 -->
+
+        <article class="event-card event-three">
+
+            <img
+            src="https://www.jaihindhphotography.com/wp-content/uploads/2020/02/Bharatanatyam-Arangetram-131-662x1024.jpg"
+            alt="Bharatanatyam Arangetram">
+
+            <div class="event-info">
+
+                <div class="event-tag">
+                    MILESTONE
+                </div>
+
+                <h3>Arangetram</h3>
+
+                <p>
+                    A meaningful milestone where years of learning,
+                    discipline and preparation come together in a
+                    formal performance.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENT 4 -->
+
+        <article class="event-card event-four">
+
+            <img
+            src="https://images.pexels.com/photos/31521701/pexels-photo-31521701/free-photo-of-traditional-indian-dance-at-ancient-temple.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="Indian classical dance at temple">
+
+            <div class="event-info">
+
+                <div class="event-tag">
+                    HERITAGE
+                </div>
+
+                <h3>Dance & Sacred Spaces</h3>
+
+                <p>
+                    Traditional dance carries a deep relationship with
+                    heritage and sacred spaces, connecting movement with
+                    generations of Indian artistic culture.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- EVENT 5 -->
+
+        <article class="event-card event-five">
+
+            <img
+            src="https://www.hclconcerts.com/wp-content/uploads/2026/05/image-2026-05-19T155744.368.png"
+            alt="Kuchipudi performance">
+
+            <div class="event-info">
+
+                <div class="event-tag">
+                    PERFORMANCE
+                </div>
+
+                <h3>A Night Of Expression</h3>
+
+                <p>
+                    From expressive storytelling to precise rhythmic
+                    movement, classical dance creates a powerful
+                    connection between performer and audience.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- EVENT STORY -->
+
+    <div class="event-story">
+
+        <div class="event-story-number">
+            03.01
+        </div>
+
+        <div>
+
+            <h3>Why These Moments Matter</h3>
+
+            <p>
+                A dance academy is built not only inside a classroom.
+                It grows through the moments when students step onto
+                a stage, families gather, teachers watch their students
+                grow and audiences experience the beauty of Indian
+                dance together.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HERITAGE ================= -->
+
+<section class="gallery-section heritage">
+
+    <div class="section-header">
+
+        <div class="section-label">
+            04 / THE HERITAGE
+        </div>
+
+        <h2>An Art Carried Forward</h2>
+
+        <p>
+            Indian classical dance is more than choreography.
+            It is a language of rhythm, gesture, storytelling and
+            cultural memory passed from one generation to another.
+        </p>
+
+    </div>
+
+
+    <div class="heritage-grid">
+
+        <div class="heritage-card">
+
+            <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/070/861/711/small/graceful-indian-woman-dancing-in-traditional-attire-photo.jpg"
+            alt="Indian classical dancer">
+
+            <div class="heritage-info">
+
+                <span>01 / EXPRESSION</span>
+
+                <h3>The Language Of Emotion</h3>
+
+                <p>
+                    Through expression, a dancer gives feeling and
+                    meaning to every movement.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="heritage-card">
+
+            <img
+            src="https://i.pinimg.com/736x/00/1c/72/001c72992f743b7deefaa65937deee6d.jpg"
+            alt="Kathak dancer">
+
+            <div class="heritage-info">
+
+                <span>02 / GESTURE</span>
+
+                <h3>Every Gesture Speaks</h3>
+
+                <p>
+                    Mudras and hand gestures form an intricate vocabulary
+                    through which stories can be communicated.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="heritage-card">
+
+            <img
+            src="https://i.pinimg.com/originals/fa/0b/a6/fa0ba6de3569835e704358b90b3a5b78.jpg"
+            alt="Indian classical dance">
+
+            <div class="heritage-info">
+
+                <span>03 / GRACE</span>
+
+                <h3>Discipline Becomes Grace</h3>
+
+                <p>
+                    Years of practice transform technique into movement
+                    that feels effortless, controlled and expressive.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote">
+
+    <div class="quote-line"></div>
+
+    <p>
+        “Every generation receives the art, learns its language,
+        and has the privilege of carrying it forward.”
+    </p>
+
+    <small>
+        SHAHANAZ INDIAN DANCE ACADEMY
+    </small>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div class="section-label">
+        YOUR STORY STARTS HERE
+    </div>
+
+    <h2>Become Part Of The Journey</h2>
+
+    <p>
+        Learn the art. Live the rhythm. Create your own moments.
+    </p>
+
+    <a href="contact.html" class="cta-button">
+        ENQUIRE ABOUT CLASSES
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        SHAHANAZ
+    </div>
+
+    <p>
+        © 2026 SHAHANAZ INDIAN DANCE ACADEMY
+    </p>
+
+    <p>
+        TRADITION · DISCIPLINE · EXPRESSION
+    </p>
+
+</footer>
+
+</body>
+</html>

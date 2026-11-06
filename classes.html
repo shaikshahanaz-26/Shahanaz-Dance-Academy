@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classes | Shahanaz Indian Dance Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b0806;
+    color:#f4ead7;
+    font-family:'Montserrat',sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+   FULL PHOTO BACKGROUND
+   ========================================================= */
+
+.page-background{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+
+    background-color:#0b0806;
+
+    /*
+       The complete original portrait is displayed.
+       It is NOT cropped.
+    */
+    background-image:url("https://i.pinimg.com/736x/00/1c/72/001c72992f743b7deefaa65937deee6d.jpg");
+
+    background-size:contain;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    filter:brightness(.58) contrast(1.08) saturate(.9);
+}
+
+/* Dark luxury overlay */
+
+.page-background::after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(7,5,3,.35),
+            rgba(7,5,3,.18) 45%,
+            rgba(7,5,3,.50)
+        );
+}
+
+/* =========================================================
+   GOLD TOP LINE
+   ========================================================= */
+
+.top-line{
+    height:3px;
+    width:100%;
+
+    background:#c9a968;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header{
+    position:relative;
+    z-index:10;
+
+    min-height:92px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(10,8,6,.78);
+
+    border-bottom:1px solid rgba(201,169,104,.35);
+
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-family:'Cinzel',serif;
+    color:#e4c982;
+
+    font-size:22px;
+    letter-spacing:3px;
+
+    white-space:nowrap;
+}
+
+.logo span{
+    display:block;
+
+    font-family:'Montserrat',sans-serif;
+
+    color:#cfc2aa;
+
+    font-size:8px;
+    letter-spacing:4px;
+
+    margin-top:5px;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+nav a{
+    color:#eee3cf;
+    text-decoration:none;
+
+    font-size:11px;
+    letter-spacing:1.8px;
+
+    transition:.3s ease;
+}
+
+nav a:hover{
+    color:#d6b76d;
+}
+
+.nav-enroll{
+    padding:11px 20px;
+
+    border:1px solid #c9a968;
+
+    color:#e4c982 !important;
+
+    background:transparent;
+
+    transition:.3s ease;
+}
+
+.nav-enroll:hover{
+    background:#c9a968;
+    color:#100c08 !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero{
+    min-height:78vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:90px 20px;
+
+    position:relative;
+}
+
+.hero-content{
+    max-width:900px;
+
+    padding:60px 50px;
+
+    background:rgba(8,6,4,.48);
+
+    border:1px solid rgba(201,169,104,.32);
+
+    backdrop-filter:blur(3px);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.35);
+}
+
+.hero-small{
+    color:#d6b76d;
+
+    font-size:12px;
+
+    letter-spacing:5px;
+
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-family:'Cinzel',serif;
+
+    font-size:clamp(42px,6vw,78px);
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    color:#f6ead4;
+
+    line-height:1.05;
+}
+
+.hero-line{
+    width:80px;
+    height:1px;
+
+    background:#c9a968;
+
+    margin:28px auto;
+}
+
+.hero p{
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:25px;
+
+    color:#e4d4b8;
+
+    font-style:italic;
+
+    letter-spacing:1px;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section{
+    position:relative;
+
+    padding:100px 7%;
+
+    background:rgba(9,7,5,.76);
+
+    border-top:1px solid rgba(201,169,104,.12);
+}
+
+.section-heading{
+    text-align:center;
+
+    max-width:850px;
+
+    margin:0 auto 60px;
+}
+
+.section-label{
+    color:#c9a968;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+}
+
+.section-heading h2{
+    font-family:'Cinzel',serif;
+
+    color:#f1e4ce;
+
+    font-size:clamp(30px,4vw,48px);
+
+    letter-spacing:2px;
+
+    font-weight:500;
+}
+
+.section-heading p{
+    margin-top:22px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#d7c7ad;
+
+    font-size:21px;
+
+    line-height:1.6;
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro{
+    background:rgba(13,10,7,.70);
+}
+
+.intro-text{
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:25px;
+
+    line-height:1.7;
+
+    color:#e5d7bf;
+}
+
+/* =========================================================
+   CLASS CARDS
+   ========================================================= */
+
+.class-grid{
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.class-card{
+    min-height:260px;
+
+    padding:38px 30px;
+
+    background:rgba(18,14,10,.82);
+
+    border:1px solid rgba(201,169,104,.28);
+
+    position:relative;
+
+    transition:.35s ease;
+}
+
+.class-card::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:0;
+    height:2px;
+
+    background:#c9a968;
+
+    transition:.35s ease;
+}
+
+.class-card:hover{
+    transform:translateY(-7px);
+
+    border-color:#c9a968;
+
+    background:rgba(20,15,10,.92);
+}
+
+.class-card:hover::before{
+    width:100%;
+}
+
+.class-number{
+    font-family:'Cinzel',serif;
+
+    font-size:14px;
+
+    color:#c9a968;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.class-card h3{
+    font-family:'Cinzel',serif;
+
+    color:#f0dfc0;
+
+    font-size:21px;
+
+    letter-spacing:1px;
+
+    margin-bottom:16px;
+}
+
+.class-card p{
+    color:#cfc1a9;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    font-weight:300;
+}
+
+/* =========================================================
+   TECHNIQUE SECTION
+   ========================================================= */
+
+.technique{
+    background:rgba(7,5,4,.78);
+}
+
+.technique-wrapper{
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.technique-copy h2{
+    font-family:'Cinzel',serif;
+
+    color:#eee0c7;
+
+    font-size:38px;
+
+    margin-bottom:25px;
+}
+
+.technique-copy p{
+    color:#d0c0a5;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+.technique-list{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+}
+
+.technique-item{
+    padding:18px;
+
+    border-left:1px solid #c9a968;
+
+    background:rgba(25,19,13,.75);
+
+    color:#e1d1b6;
+
+    font-size:13px;
+
+    letter-spacing:.5px;
+}
+
+/* =========================================================
+   RHYTHM
+   ========================================================= */
+
+.rhythm{
+    text-align:center;
+
+    background:rgba(12,9,6,.76);
+}
+
+.rhythm-grid{
+    max-width:950px;
+
+    margin:50px auto 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+}
+
+.rhythm-box{
+    padding:35px 20px;
+
+    border:1px solid rgba(201,169,104,.25);
+
+    background:rgba(20,15,10,.78);
+}
+
+.rhythm-box h3{
+    font-family:'Cinzel',serif;
+
+    color:#d9bb76;
+
+    font-size:18px;
+
+    margin-bottom:12px;
+}
+
+.rhythm-box p{
+    font-size:13px;
+
+    color:#c9bba5;
+
+    line-height:1.7;
+}
+
+/* =========================================================
+   ABHINAYA
+   ========================================================= */
+
+.abhinaya{
+    background:rgba(8,6,4,.80);
+}
+
+.abhinaya-content{
+    max-width:1000px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.abhinaya-content h2{
+    font-family:'Cinzel',serif;
+
+    color:#f0dfc0;
+
+    font-size:40px;
+
+    margin-bottom:25px;
+}
+
+.abhinaya-content p{
+    max-width:800px;
+
+    margin:auto;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:23px;
+
+    line-height:1.7;
+
+    color:#d9c9ae;
+}
+
+.abhinaya-line{
+    width:70px;
+
+    height:1px;
+
+    background:#c9a968;
+
+    margin:30px auto;
+}
+
+/* =========================================================
+   INSIDE A CLASS
+   ========================================================= */
+
+.inside{
+    background:rgba(14,10,7,.78);
+}
+
+.inside-grid{
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:15px;
+}
+
+.inside-step{
+    text-align:center;
+
+    padding:32px 15px;
+
+    background:rgba(25,19,13,.78);
+
+    border:1px solid rgba(201,169,104,.22);
+}
+
+.inside-step span{
+    display:block;
+
+    color:#c9a968;
+
+    font-family:'Cinzel',serif;
+
+    font-size:13px;
+
+    margin-bottom:15px;
+}
+
+.inside-step h3{
+    color:#eadbc1;
+
+    font-family:'Cinzel',serif;
+
+    font-size:15px;
+
+    letter-spacing:.5px;
+}
+
+/* =========================================================
+   PERFORMANCE
+   ========================================================= */
+
+.performance{
+    text-align:center;
+
+    padding:120px 20px;
+
+    background:rgba(7,5,3,.82);
+}
+
+.performance h2{
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    color:#f0dfc0;
+
+    margin-bottom:20px;
+}
+
+.performance p{
+    max-width:800px;
+
+    margin:0 auto 35px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:23px;
+
+    line-height:1.6;
+
+    color:#d8c7ab;
+}
+
+.performance-button{
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border:1px solid #c9a968;
+
+    color:#e3c47c;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    transition:.3s ease;
+}
+
+.performance-button:hover{
+    background:#c9a968;
+
+    color:#100c08;
+}
+
+/* =========================================================
+   ENQUIRY
+   ========================================================= */
+
+.enquiry{
+    text-align:center;
+
+    background:rgba(15,11,7,.82);
+}
+
+.enquiry h2{
+    font-family:'Cinzel',serif;
+
+    color:#f0dfc0;
+
+    font-size:40px;
+
+    margin-bottom:18px;
+}
+
+.enquiry p{
+    font-family:'Cormorant Garamond',serif;
+
+    color:#d4c2a5;
+
+    font-size:22px;
+
+    margin-bottom:30px;
+}
+
+.email-button{
+    display:inline-block;
+
+    padding:15px 28px;
+
+    border:1px solid #c9a968;
+
+    color:#e4c982;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    transition:.3s ease;
+}
+
+.email-button:hover{
+    background:#c9a968;
+
+    color:#100c08;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer{
+    position:relative;
+
+    padding:50px 20px;
+
+    text-align:center;
+
+    background:rgba(5,4,3,.90);
+
+    border-top:1px solid rgba(201,169,104,.25);
+}
+
+.footer-logo{
+    font-family:'Cinzel',serif;
+
+    color:#d9bb76;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#8f826f;
+
+    font-size:11px;
+
+    letter-spacing:1px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width:1000px){
+
+    header{
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:25px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+    }
+
+    .class-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .technique-wrapper{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .rhythm-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .inside-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px){
+
+    .page-background{
+        /*
+          On mobile, keep the entire portrait visible.
+        */
+        background-size:contain;
+    }
+
+    .hero{
+        min-height:70vh;
+
+        padding:60px 15px;
+    }
+
+    .hero-content{
+        padding:40px 20px;
+    }
+
+    .hero h1{
+        font-size:38px;
+
+        letter-spacing:3px;
+    }
+
+    .hero p{
+        font-size:21px;
+    }
+
+    section{
+        padding:75px 20px;
+    }
+
+    .class-grid{
+        grid-template-columns:1fr;
+    }
+
+    .rhythm-grid{
+        grid-template-columns:1fr;
+    }
+
+    .inside-grid{
+        grid-template-columns:1fr;
+    }
+
+    .technique-list{
+        grid-template-columns:1fr;
+    }
+
+    .performance h2,
+    .enquiry h2,
+    .abhinaya-content h2{
+        font-size:30px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page-background"></div>
+
+<div class="top-line"></div>
+
+<header>
+
+    <div class="logo">
+        SHAHANAZ
+        <span>INDIAN DANCE ACADEMY</span>
+    </div>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="programs.html">PROGRAMS</a>
+        <a href="classes.html">CLASSES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="#enquiry" class="nav-enroll">ENROLL</a>
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            OUR CLASSES
+        </div>
+
+        <h1>
+            LEARN THE ART
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            Master the movement. Understand the rhythm.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+     ===================================================== -->
+
+<section class="intro">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            THE CLASSROOM
+        </div>
+
+        <h2>
+            Where Every Movement Has Meaning
+        </h2>
+
+    </div>
+
+    <p class="intro-text">
+        Our classes go beyond learning steps. Students are guided
+        through technique, rhythm, expression and discipline,
+        developing a deeper understanding of Indian classical dance.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     WHAT YOU LEARN
+     ===================================================== -->
+
+<section>
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            TRAINING
+        </div>
+
+        <h2>
+            What You Will Learn
+        </h2>
+
+        <p>
+            Every class builds a strong foundation while gradually
+            developing confidence, musicality and artistic expression.
+        </p>
+
+    </div>
+
+
+    <div class="class-grid">
+
+        <div class="class-card">
+
+            <div class="class-number">
+                01
+            </div>
+
+            <h3>
+                Adavus & Technique
+            </h3>
+
+            <p>
+                Learn foundational movements, posture, footwork,
+                body alignment and controlled execution.
+            </p>
+
+        </div>
+
+
+        <div class="class-card">
+
+            <div class="class-number">
+                02
+            </div>
+
+            <h3>
+                Mudras
+            </h3>
+
+            <p>
+                Discover the language of hand gestures and learn
+                how traditional mudras communicate ideas and stories.
+            </p>
+
+        </div>
+
+
+        <div class="class-card">
+
+            <div class="class-number">
+                03
+            </div>
+
+            <h3>
+                Rhythm & Tala
+            </h3>
+
+            <p>
+                Develop an understanding of beats, tempo, tala and
+                the relationship between movement and music.
+            </p>
+
+        </div>
+
+
+        <div class="class-card">
+
+            <div class="class-number">
+                04
+            </div>
+
+            <h3>
+                Abhinaya
+            </h3>
+
+            <p>
+                Explore facial expression, emotion and storytelling
+                through the expressive language of Indian dance.
+            </p>
+
+        </div>
+
+
+        <div class="class-card">
+
+            <div class="class-number">
+                05
+            </div>
+
+            <h3>
+                Nritta & Nritya
+            </h3>
+
+            <p>
+                Understand the difference between pure movement and
+                expressive dance and learn how they work together.
+            </p>
+
+        </div>
+
+
+        <div class="class-card">
+
+            <div class="class-number">
+                06
+            </div>
+
+            <h3>
+                Dance Theory
+            </h3>
+
+            <p>
+                Gain knowledge of Indian dance traditions, terminology,
+                history and the cultural meaning behind the art form.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TECHNIQUE
+     ===================================================== -->
+
+<section class="technique">
+
+    <div class="technique-wrapper">
+
+        <div class="technique-copy">
+
+            <div class="section-label">
+                FOUNDATION
+            </div>
+
+            <h2>
+                Technique Before Performance
+            </h2>
+
+            <p>
+                A beautiful performance begins with disciplined
+                training. Our classes focus on developing strong
+                fundamentals before moving into advanced choreography
+                and stage performance.
+            </p>
+
+        </div>
+
+
+        <div class="technique-list">
+
+            <div class="technique-item">
+                Posture
+            </div>
+
+            <div class="technique-item">
+                Footwork
+            </div>
+
+            <div class="technique-item">
+                Hand Gestures
+            </div>
+
+            <div class="technique-item">
+                Body Control
+            </div>
+
+            <div class="technique-item">
+                Coordination
+            </div>
+
+            <div class="technique-item">
+                Precision
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     RHYTHM
+     ===================================================== -->
+
+<section class="rhythm">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            MUSIC & MOVEMENT
+        </div>
+
+        <h2>
+            Move With The Rhythm
+        </h2>
+
+        <p>
+            Dance is not only movement. It is movement connected
+            to rhythm, music and timing.
+        </p>
+
+    </div>
+
+
+    <div class="rhythm-grid">
+
+        <div class="rhythm-box">
+
+            <h3>
+                Tala
+            </h3>
+
+            <p>
+                Understanding rhythmic cycles and their structure.
+            </p>
+
+        </div>
+
+
+        <div class="rhythm-box">
+
+            <h3>
+                Tempo
+            </h3>
+
+            <p>
+                Learning to control movement through changing speeds.
+            </p>
+
+        </div>
+
+
+        <div class="rhythm-box">
+
+            <h3>
+                Beat
+            </h3>
+
+            <p>
+                Developing accuracy and confidence with rhythmic patterns.
+            </p>
+
+        </div>
+
+
+        <div class="rhythm-box">
+
+            <h3>
+                Musicality
+            </h3>
+
+            <p>
+                Learning to listen, respond and move with the music.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABHINAYA
+     ===================================================== -->
+
+<section class="abhinaya">
+
+    <div class="abhinaya-content">
+
+        <div class="section-label">
+            EXPRESSION
+        </div>
+
+        <h2>
+            The Language Beyond Words
+        </h2>
+
+        <div class="abhinaya-line"></div>
+
+        <p>
+            Through Abhinaya, students learn how emotion,
+            expression and storytelling become part of dance.
+            A movement becomes meaningful when it communicates
+            something to the audience.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INSIDE A CLASS
+     ===================================================== -->
+
+<section class="inside">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            THE EXPERIENCE
+        </div>
+
+        <h2>
+            Inside A Dance Class
+        </h2>
+
+    </div>
+
+
+    <div class="inside-grid">
+
+        <div class="inside-step">
+
+            <span>
+                01
+            </span>
+
+            <h3>
+                Warm-Up
+            </h3>
+
+        </div>
+
+
+        <div class="inside-step">
+
+            <span>
+                02
+            </span>
+
+            <h3>
+                Technique
+            </h3>
+
+        </div>
+
+
+        <div class="inside-step">
+
+            <span>
+                03
+            </span>
+
+            <h3>
+                Rhythm Practice
+            </h3>
+
+        </div>
+
+
+        <div class="inside-step">
+
+            <span>
+                04
+            </span>
+
+            <h3>
+                Choreography
+            </h3>
+
+        </div>
+
+
+        <div class="inside-step">
+
+            <span>
+                05
+            </span>
+
+            <h3>
+                Practice & Review
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PERFORMANCE
+     ===================================================== -->
+
+<section class="performance">
+
+    <div class="section-label">
+        BEYOND THE CLASSROOM
+    </div>
+
+    <h2>
+        From Practice To Performance
+    </h2>
+
+    <p>
+        Students gradually develop the confidence and discipline
+        needed to present their art on stage, from small showcases
+        to major performances and traditional celebrations.
+    </p>
+
+    <a href="#enquiry" class="performance-button">
+        BEGIN YOUR JOURNEY
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     ENQUIRY
+     ===================================================== -->
+
+<section class="enquiry" id="enquiry">
+
+    <div class="section-label">
+        JOIN US
+    </div>
+
+    <h2>
+        Begin Your Dance Journey
+    </h2>
+
+    <p>
+        Enquire about classes, schedules and enrollment.
+    </p>
+
+    <a
+        href="mailto:shahanazdanceacademy@gmail.com"
+        class="email-button"
+    >
+        ENQUIRE ABOUT CLASSES
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        SHAHANAZ
+    </div>
+
+    <p>
+        INDIAN DANCE ACADEMY
+    </p>
+
+    <p style="margin-top:15px;">
+        © 2026 Shahanaz Indian Dance Academy. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

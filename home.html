@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+```
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shahanaz Indian Dance Academy | Luxury & Classic</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+>
+
+<style>
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: #090807;
+        color: #f4eee4;
+        font-family: "Montserrat", sans-serif;
+        overflow-x: hidden;
+    }
+
+    img,
+    video {
+        width: 100%;
+        display: block;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    button {
+        font-family: inherit;
+    }
+
+
+    /* =========================================================
+       COLORS
+    ========================================================= */
+
+    :root {
+        --black: #090807;
+        --black-2: #0e0b09;
+        --black-3: #15100d;
+
+        --espresso: #241a13;
+        --espresso-2: #302219;
+
+        --ivory: #f5eee3;
+        --cream: #e9ddcc;
+
+        --gold: #c7a566;
+        --gold-light: #e2c78e;
+        --gold-dark: #8d6c38;
+
+        --text-muted: #9c9187;
+    }
+
+
+    /* =========================================================
+       GLOBAL BACKGROUND
+    ========================================================= */
+
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+
+        background:
+            radial-gradient(
+                ellipse at 15% 20%,
+                rgba(160,117,59,0.09),
+                transparent 32%
+            ),
+
+            radial-gradient(
+                ellipse at 85% 35%,
+                rgba(201,168,106,0.07),
+                transparent 35%
+            ),
+
+            radial-gradient(
+                ellipse at 50% 100%,
+                rgba(93,62,35,0.12),
+                transparent 38%
+            ),
+
+            #090807;
+    }
+
+
+    /* Very subtle texture */
+
+    body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: .16;
+
+        background-image:
+            radial-gradient(
+                rgba(255,255,255,.22) .5px,
+                transparent .5px
+            );
+
+        background-size: 5px 5px;
+    }
+
+
+    /* =========================================================
+       TOP GOLD LINE
+    ========================================================= */
+
+    .top-line {
+        height: 3px;
+
+        background:
+            linear-gradient(
+                90deg,
+                #72552e,
+                #c7a566,
+                #ead29b,
+                #c7a566,
+                #72552e
+            );
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    header {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 28px 6%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom:
+            1px solid rgba(226,199,142,.28);
+
+        padding-bottom: 22px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo-main {
+        font-family: "Cinzel", serif;
+        font-size: 25px;
+        letter-spacing: 5px;
+        font-weight: 600;
+        color: var(--ivory);
+
+        text-shadow:
+            0 0 30px rgba(201,168,106,.12);
+    }
+
+    .logo-sub {
+        display: block;
+        margin-top: 5px;
+        color: var(--gold-light);
+        font-size: 7px;
+        letter-spacing: 4px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        position: relative;
+
+        font-size: 9px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        color: #ddd3c7;
+
+        transition: .3s ease;
+    }
+
+    .nav-links a:not(.nav-enroll)::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+
+        width: 0;
+        height: 1px;
+
+        background: var(--gold);
+
+        transition: .3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--gold-light);
+    }
+
+    .nav-links a:hover::after {
+        width: 100%;
+    }
+
+    .nav-enroll {
+        border: 1px solid var(--gold);
+
+        padding: 11px 20px;
+
+        color: var(--gold-light) !important;
+
+        transition: .3s ease;
+    }
+
+    .nav-enroll:hover {
+        background: var(--gold);
+        color: #15100b !important;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+        display: flex;
+        align-items: center;
+
+        background: #090807;
+    }
+
+
+    /* Decorative circle */
+
+    .hero::before {
+        content: "";
+
+        position: absolute;
+
+        width: 750px;
+        height: 750px;
+
+        border-radius: 50%;
+
+        left: -330px;
+        top: 12%;
+
+        border:
+            1px solid rgba(201,168,106,.09);
+
+        box-shadow:
+            inset 0 0 100px rgba(201,168,106,.025),
+            0 0 100px rgba(201,168,106,.025);
+
+        pointer-events: none;
+        z-index: 7;
+    }
+
+
+    /* Decorative star */
+
+    .hero::after {
+        content: "✦";
+
+        position: absolute;
+
+        right: 9%;
+        bottom: 13%;
+
+        font-size: 100px;
+
+        color: rgba(201,168,106,.07);
+
+        transform: rotate(15deg);
+
+        pointer-events: none;
+        z-index: 7;
+    }
+
+
+    /* =========================================================
+       HERO VIDEO
+    ========================================================= */
+
+    .hero-image {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: 1;
+
+        overflow: hidden;
+    }
+
+    .hero-image video {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+
+        display: block;
+
+        filter:
+            brightness(.95)
+            contrast(1)
+            saturate(1);
+
+        transform: scale(1.02);
+
+        transition:
+            transform 1.2s ease,
+            filter 1.2s ease;
+    }
+
+
+    /* Video overlay */
+
+    .hero-image::before {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        z-index: 5;
+
+        background:
+
+            linear-gradient(
+                90deg,
+                rgba(9,8,7,.82) 0%,
+                rgba(9,8,7,.60) 25%,
+                rgba(9,8,7,.28) 55%,
+                rgba(9,8,7,.30) 100%
+            ),
+
+            linear-gradient(
+                180deg,
+                rgba(9,8,7,.48) 0%,
+                transparent 22%,
+                transparent 72%,
+                rgba(9,8,7,.68) 100%
+            );
+
+        pointer-events: none;
+    }
+
+
+    /* Warm glow */
+
+    .hero-image::after {
+        content: "";
+
+        position: absolute;
+        inset: 0;
+
+        z-index: 6;
+
+        background:
+            radial-gradient(
+                ellipse at 68% 48%,
+                rgba(224,197,141,.10),
+                transparent 48%
+            );
+
+        pointer-events: none;
+    }
+
+
+    /* =========================================================
+       HERO CONTENT
+    ========================================================= */
+
+    .hero-content {
+        width: 54%;
+
+        padding:
+            160px 5% 120px 8%;
+
+        position: relative;
+
+        z-index: 10;
+    }
+
+    .hero-content::before {
+        content: "✦";
+
+        position: absolute;
+
+        top: 38%;
+        left: 4%;
+
+        color: rgba(201,168,106,.55);
+
+        font-size: 20px;
+    }
+
+    .hero-label {
+        color: var(--gold);
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 5px;
+
+        margin-bottom: 25px;
+    }
+
+    .hero h1 {
+        font-family: "Cinzel", serif;
+
+        font-size: clamp(50px, 6vw, 85px);
+
+        font-weight: 500;
+
+        line-height: 1.05;
+
+        letter-spacing: 3px;
+
+        margin-bottom: 30px;
+
+        text-shadow:
+            0 15px 45px rgba(0,0,0,.45);
+    }
+
+    .hero h1 span {
+        color: var(--gold-light);
+
+        text-shadow:
+            0 0 35px rgba(201,168,106,.18);
+    }
+
+    .hero-subtitle {
+        font-family: "Cormorant Garamond", serif;
+
+        color: var(--cream);
+
+        font-size: 27px;
+
+        font-style: italic;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-description {
+        max-width: 500px;
+
+        color: #aaa097;
+
+        font-size: 12px;
+
+        line-height: 2;
+
+        margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+        display: flex;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+
+    /* =========================================================
+       BUTTONS
+    ========================================================= */
+
+    .button {
+        display: inline-block;
+
+        padding: 15px 27px;
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+
+        transition: .35s ease;
+    }
+
+    .button-gold {
+        background:
+            linear-gradient(
+                135deg,
+                #a98348,
+                #e0c58d,
+                #b48e51
+            );
+
+        color: #15100b;
+
+        box-shadow:
+            0 12px 35px rgba(0,0,0,.25);
+    }
+
+    .button-outline {
+        border:
+            1px solid rgba(201,168,106,.65);
+
+        color: var(--gold-light);
+
+        background:
+            rgba(201,168,106,.025);
+    }
+
+    .button:hover {
+        transform: translateY(-4px);
+
+        box-shadow:
+            0 15px 35px rgba(0,0,0,.38);
+    }
+
+
+    /* =========================================================
+       ORNAMENT
+    ========================================================= */
+
+    .ornament {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 15px;
+
+        margin: 25px 0;
+    }
+
+    .ornament::before,
+    .ornament::after {
+        content: "";
+
+        width: 60px;
+        height: 1px;
+
+        background:
+            linear-gradient(
+                90deg,
+                transparent,
+                var(--gold-dark)
+            );
+    }
+
+    .ornament::after {
+        background:
+            linear-gradient(
+                90deg,
+                var(--gold-dark),
+                transparent
+            );
+    }
+
+    .ornament span {
+        color: var(--gold);
+
+        font-size: 13px;
+
+        text-shadow:
+            0 0 18px rgba(201,168,106,.4);
+    }
+
+
+    /* =========================================================
+       INTRODUCTION
+    ========================================================= */
+
+    .intro {
+        position: relative;
+
+        overflow: hidden;
+
+        color: var(--black);
+
+        padding: 125px 8%;
+
+        text-align: center;
+
+        background:
+
+            radial-gradient(
+                ellipse at 50% 0%,
+                rgba(255,255,255,.25),
+                transparent 42%
+            ),
+
+            radial-gradient(
+                ellipse at 10% 70%,
+                rgba(141,108,54,.08),
+                transparent 30%
+            ),
+
+            linear-gradient(
+                135deg,
+                #f0e6d7,
+                #e6dac9
+            );
+    }
+
+    .intro::before {
+        content: "❋";
+
+        position: absolute;
+
+        left: -20px;
+        top: 25%;
+
+        font-size: 220px;
+
+        color: rgba(141,108,54,.045);
+
+        transform: rotate(15deg);
+    }
+
+    .intro::after {
+        content: "✦";
+
+        position: absolute;
+
+        right: 7%;
+        bottom: 10%;
+
+        font-size: 140px;
+
+        color: rgba(141,108,54,.045);
+    }
+
+    .section-label {
+        color: var(--gold-dark);
+
+        text-transform: uppercase;
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 18px;
+    }
+
+    .section-title {
+        font-family: "Cinzel", serif;
+
+        font-size: clamp(40px, 5vw, 65px);
+
+        font-weight: 500;
+
+        line-height: 1.05;
+    }
+
+    .intro-text {
+        max-width: 760px;
+
+        margin: 30px auto 0;
+
+        color: #665d55;
+
+        font-size: 13px;
+
+        line-height: 2;
+    }
+
+
+    /* =========================================================
+       PHILOSOPHY
+    ========================================================= */
+
+    .philosophy {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 120px 7%;
+
+        text-align: center;
+
+        background:
+
+            radial-gradient(
+                ellipse at center,
+                rgba(201,168,106,.10),
+                transparent 48%
+            ),
+
+            radial-gradient(
+                ellipse at 0% 100%,
+                rgba(100,68,39,.14),
+                transparent 32%
+            ),
+
+            #0b0908;
+    }
+
+    .philosophy::before {
+        content: "";
+
+        position: absolute;
+
+        width: 650px;
+        height: 650px;
+
+        border-radius: 50%;
+
+        left: -330px;
+        top: 15%;
+
+        border:
+            1px solid rgba(201,168,106,.07);
+    }
+
+    .philosophy::after {
+        content: "❋";
+
+        position: absolute;
+
+        right: -90px;
+        bottom: -130px;
+
+        font-size: 430px;
+
+        color: rgba(201,168,106,.022);
+    }
+
+    .philosophy .section-title {
+        color: var(--ivory);
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .values {
+        max-width: 1100px;
+
+        margin: 70px auto 0;
+
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .value {
+        padding: 30px;
+
+        border-right:
+            1px solid rgba(201,168,106,.25);
+
+        transition: .3s ease;
+    }
+
+    .value:hover {
+        transform: translateY(-5px);
+    }
+
+    .value:last-child {
+        border-right: none;
+    }
+
+    .value-icon {
+        color: var(--gold);
+
+        font-size: 27px;
+
+        margin-bottom: 18px;
+    }
+
+    .value h3 {
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 28px;
+
+        font-weight: 500;
+
+        margin-bottom: 10px;
+    }
+
+    .value p {
+        color: #938b84;
+
+        font-size: 10px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       QUOTE
+    ========================================================= */
+
+    .quote {
+        position: relative;
+
+        overflow: hidden;
+
+        background:
+
+            radial-gradient(
+                ellipse at center,
+                rgba(201,168,106,.10),
+                transparent 45%
+            ),
+
+            linear-gradient(
+                135deg,
+                #f0e7d9,
+                #e4d7c5
+            );
+
+        color: var(--black);
+
+        text-align: center;
+
+        padding: 130px 8%;
+    }
+
+    .quote::before {
+        content: "“";
+
+        position: absolute;
+
+        left: 5%;
+        top: -20px;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 280px;
+
+        color: rgba(141,108,54,.055);
+    }
+
+    .quote-text {
+        max-width: 900px;
+
+        margin: auto;
+
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: clamp(40px, 5vw, 68px);
+
+        font-style: italic;
+
+        line-height: 1;
+    }
+
+    .quote-author {
+        margin-top: 30px;
+
+        color: var(--gold-dark);
+
+        font-size: 9px;
+
+        letter-spacing: 4px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       GALLERY
+    ========================================================= */
+
+    .gallery {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 120px 6%;
+
+        background:
+
+            radial-gradient(
+                ellipse at 50% 50%,
+                rgba(201,168,106,.07),
+                transparent 48%
+            ),
+
+            linear-gradient(
+                135deg,
+                #0c0908,
+                #17110d,
+                #0b0908
+            );
+    }
+
+    .gallery::before {
+        content: "✦";
+
+        position: absolute;
+
+        left: 4%;
+        top: 12%;
+
+        font-size: 180px;
+
+        color: rgba(201,168,106,.035);
+    }
+
+    .gallery-heading {
+        position: relative;
+
+        z-index: 2;
+
+        text-align: center;
+
+        margin-bottom: 55px;
+    }
+
+    .gallery .section-title {
+        color: var(--ivory);
+    }
+
+    .gallery-grid {
+        position: relative;
+
+        z-index: 3;
+
+        display: grid;
+
+        grid-template-columns: 1.2fr .8fr .8fr;
+
+        grid-template-rows: 280px 280px;
+
+        gap: 12px;
+    }
+
+    .gallery-item {
+        position: relative;
+
+        overflow: hidden;
+
+        background: #100d0b;
+    }
+
+    .gallery-item img {
+        height: 100%;
+
+        object-fit: cover;
+
+        filter:
+            brightness(.75)
+            saturate(.75);
+
+        transition: .7s ease;
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.06);
+
+        filter:
+            brightness(.9)
+            saturate(.88);
+    }
+
+    .gallery-item:first-child {
+        grid-row: span 2;
+    }
+
+    .gallery-item::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 12px;
+
+        border:
+            1px solid rgba(224,197,141,.38);
+
+        pointer-events: none;
+    }
+
+
+    /* =========================================================
+       TESTIMONIAL
+    ========================================================= */
+
+    .testimonials {
+        position: relative;
+
+        overflow: hidden;
+
+        background:
+
+            radial-gradient(
+                ellipse at center,
+                rgba(201,168,106,.08),
+                transparent 45%
+            ),
+
+            #eee5d8;
+
+        color: var(--black);
+
+        padding: 120px 8%;
+
+        text-align: center;
+    }
+
+    .testimonials::before {
+        content: "❋";
+
+        position: absolute;
+
+        right: -50px;
+        top: 5%;
+
+        font-size: 240px;
+
+        color: rgba(141,108,54,.04);
+    }
+
+    .testimonial {
+        max-width: 800px;
+
+        margin: 50px auto 0;
+
+        position: relative;
+
+        z-index: 2;
+    }
+
+    .testimonial p {
+        font-family: "Cormorant Garamond", serif;
+
+        font-size: 36px;
+
+        font-style: italic;
+
+        line-height: 1.35;
+    }
+
+    .testimonial span {
+        display: block;
+
+        color: var(--gold-dark);
+
+        margin-top: 25px;
+
+        font-size: 9px;
+
+        letter-spacing: 3px;
+
+        text-transform: uppercase;
+    }
+
+
+    /* =========================================================
+       EVENTS
+    ========================================================= */
+
+    .events {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 90px 7%;
+
+        background:
+
+            radial-gradient(
+                ellipse at 80% 50%,
+                rgba(201,168,106,.08),
+                transparent 38%
+            ),
+
+            linear-gradient(
+                110deg,
+                #19120e,
+                #0b0908
+            );
+
+        border-top:
+            1px solid rgba(201,168,106,.18);
+
+        border-bottom:
+            1px solid rgba(201,168,106,.18);
+    }
+
+    .events-container {
+        max-width: 1100px;
+
+        margin: auto;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        gap: 40px;
+    }
+
+    .events h2 {
+        font-family: "Cinzel", serif;
+
+        font-size: 38px;
+
+        font-weight: 500;
+    }
+
+    .events p {
+        color: #918a84;
+
+        max-width: 430px;
+
+        font-size: 11px;
+
+        line-height: 1.8;
+    }
+
+
+    /* =========================================================
+       FINAL CTA
+    ========================================================= */
+
+    .cta {
+        position: relative;
+
+        overflow: hidden;
+
+        padding: 150px 8%;
+
+        text-align: center;
+
+        background:
+
+            radial-gradient(
+                ellipse at center,
+                rgba(224,197,141,.16),
+                transparent 40%
+            ),
+
+            radial-gradient(
+                ellipse at 15% 90%,
+                rgba(103,69,39,.20),
+                transparent 35%
+            ),
+
+            linear-gradient(
+                135deg,
+                #090807,
+                #261b13,
+                #090807
+            );
+
+        border-top:
+            1px solid var(--gold-dark);
+
+        border-bottom:
+            1px solid var(--gold-dark);
+    }
+
+    .cta::before {
+        content: "❋";
+
+        position: absolute;
+
+        left: 4%;
+        top: 5%;
+
+        font-size: 240px;
+
+        color: rgba(201,168,106,.035);
+    }
+
+    .cta::after {
+        content: "✦";
+
+        position: absolute;
+
+        right: 7%;
+        bottom: 8%;
+
+        font-size: 170px;
+
+        color: rgba(201,168,106,.045);
+    }
+
+    .cta h2 {
+        position: relative;
+
+        z-index: 2;
+
+        font-family: "Cinzel", serif;
+
+        font-size: clamp(45px, 6vw, 75px);
+
+        font-weight: 500;
+
+        line-height: 1;
+
+        margin-bottom: 35px;
+    }
+
+    .cta p {
+        position: relative;
+
+        z-index: 2;
+
+        color: #b3aaa2;
+
+        font-size: 12px;
+
+        margin-bottom: 30px;
+    }
+
+    .cta .button {
+        position: relative;
+        z-index: 2;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+        position: relative;
+
+        background:
+
+            radial-gradient(
+                ellipse at 20% 0%,
+                rgba(201,168,106,.06),
+                transparent 32%
+            ),
+
+            #070605;
+
+        padding: 75px 6% 25px;
+    }
+
+    .footer-grid {
+        display: grid;
+
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+
+        gap: 50px;
+
+        margin-bottom: 60px;
+    }
+
+    .footer-logo {
+        font-family: "Cinzel", serif;
+
+        font-size: 29px;
+
+        letter-spacing: 4px;
+    }
+
+    .footer-description {
+        max-width: 310px;
+
+        color: #817a73;
+
+        font-size: 10px;
+
+        line-height: 1.9;
+
+        margin-top: 15px;
+    }
+
+    footer h4 {
+        color: var(--gold-light);
+
+        font-size: 9px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 20px;
+    }
+
+    footer ul {
+        list-style: none;
+    }
+
+    footer li {
+        color: #817a73;
+
+        font-size: 10px;
+
+        margin-bottom: 12px;
+    }
+
+    footer li a:hover {
+        color: var(--gold-light);
+    }
+
+    .copyright {
+        border-top:
+            1px solid rgba(201,168,106,.18);
+
+        padding-top: 25px;
+
+        color: #554f49;
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width: 950px) {
+
+        .nav-links {
+            display: none;
+        }
+
+        .hero {
+            min-height: 100vh;
+        }
+
+        .hero-content {
+            width: 100%;
+
+            min-height: 700px;
+
+            padding:
+                170px 8% 100px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-image {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            opacity: 1;
+        }
+
+        .hero-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-image::before {
+            background:
+
+                linear-gradient(
+                    90deg,
+                    rgba(9,8,7,.82) 0%,
+                    rgba(9,8,7,.55) 30%,
+                    rgba(9,8,7,.20) 70%,
+                    rgba(9,8,7,.38) 100%
+                ),
+
+                linear-gradient(
+                    180deg,
+                    rgba(9,8,7,.48),
+                    transparent 25%,
+                    transparent 75%,
+                    rgba(9,8,7,.65)
+                );
+        }
+
+        .values {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .value {
+            border-bottom:
+                1px solid rgba(201,168,106,.25);
+        }
+
+        .value:nth-child(2) {
+            border-right: none;
+        }
+
+        .events-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 600px) {
+
+        header {
+            padding: 20px 5%;
+        }
+
+        .navbar {
+            padding-bottom: 16px;
+        }
+
+        .logo-main {
+            font-size: 20px;
+            letter-spacing: 4px;
+        }
+
+        .logo-sub {
+            font-size: 6px;
+            letter-spacing: 3px;
+        }
+
+        .hero {
+            min-height: 100vh;
+        }
+
+        .hero-content {
+            min-height: 700px;
+
+            padding:
+                150px 8% 90px;
+
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+        }
+
+        .hero-subtitle {
+            font-size: 23px;
+        }
+
+        .hero-description {
+            font-size: 11px;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .button {
+            padding: 14px 22px;
+        }
+
+        .values {
+            grid-template-columns: 1fr;
+        }
+
+        .value {
+            border-right: none;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+
+            grid-template-rows:
+                repeat(5, 260px);
+        }
+
+        .gallery-item:first-child {
+            grid-row: auto;
+        }
+
+        .testimonial p {
+            font-size: 30px;
+        }
+
+        .events h2 {
+            font-size: 30px;
+        }
+
+        .footer-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cta {
+            padding: 110px 7%;
+        }
+
+        .cta h2 {
+            font-size: 45px;
+        }
+    }
+
+
+    /* =========================================================
+       REDUCE MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- =====================================================
+     TOP GOLD LINE
+===================================================== -->
+
+<div class="top-line"></div>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="home.html" class="logo">
+
+            <div class="logo-main">
+                SHAHANAZ
+            </div>
+
+            <span class="logo-sub">
+                INDIAN DANCE ACADEMY
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="home.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+
+                <li>
+                    <a href="programs.html">Programs</a>
+                </li>
+
+                <li>
+                    <a href="classes.html">Classes</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="nav-enroll">
+                        Enroll
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <!-- HERO VIDEO -->
+
+    <div class="hero-image">
+
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+        >
+            <source src="hero.mp4" type="video/mp4">
+
+            Your browser does not support HTML5 video.
+        </video>
+
+    </div>
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            Shahanaz Indian Dance Academy
+        </div>
+
+        <h1>
+            THE ART<br>
+            OF <span>DANCE</span>
+        </h1>
+
+        <div class="hero-subtitle">
+            Tradition. Grace. Expression.
+        </div>
+
+        <p class="hero-description">
+            Experience the timeless beauty of Indian dance through
+            classical technique, expressive storytelling and
+            the elegance of movement.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                href="programs.html"
+                class="button button-gold"
+            >
+                Explore Programs
+            </a>
+
+            <a
+                href="contact.html"
+                class="button button-outline"
+            >
+                Begin Your Journey
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+    <div class="section-label">
+        Welcome
+    </div>
+
+    <h2 class="section-title">
+        Where Tradition<br>
+        Becomes Art
+    </h2>
+
+    <div class="ornament">
+        <span>✦</span>
+    </div>
+
+    <p class="intro-text">
+        Shahanaz Indian Dance Academy is a place where the
+        rich heritage of Indian dance meets artistic expression.
+        We welcome students of all ages and experience levels
+        to discover the discipline, beauty and joy of dance.
+    </p>
+
+</section>
+
+
+<!-- =====================================================
+     PHILOSOPHY
+===================================================== -->
+
+<section class="philosophy">
+
+    <div class="section-label">
+        Our Philosophy
+    </div>
+
+    <h2 class="section-title">
+        The Values Behind<br>
+        Every Movement
+    </h2>
+
+    <div class="ornament">
+        <span>✦</span>
+    </div>
+
+
+    <div class="values">
+
+
+        <div class="value">
+
+            <div class="value-icon">
+                ✦
+            </div>
+
+            <h3>
+                Tradition
+            </h3>
+
+            <p>
+                Honouring the heritage and traditions
+                of Indian dance.
+            </p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="value-icon">
+                ◇
+            </div>
+
+            <h3>
+                Discipline
+            </h3>
+
+            <p>
+                Building focus, dedication and
+                strong dance foundations.
+            </p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="value-icon">
+                ✧
+            </div>
+
+            <h3>
+                Expression
+            </h3>
+
+            <p>
+                Encouraging every student to
+                express their individuality.
+            </p>
+
+        </div>
+
+
+        <div class="value">
+
+            <div class="value-icon">
+                ❋
+            </div>
+
+            <h3>
+                Confidence
+            </h3>
+
+            <p>
+                Helping dancers find confidence
+                both on and off the stage.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<section class="quote">
+
+    <div class="section-label">
+        The Spirit of Dance
+    </div>
+
+    <div class="quote-text">
+        “Dance is the hidden language
+        of the soul.”
+    </div>
+
+    <div class="ornament">
+        <span>✦</span>
+    </div>
+
+    <div class="quote-author">
+        Shahanaz Indian Dance Academy
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section class="gallery">
+
+    <div class="gallery-heading">
+
+        <div class="section-label">
+            Our Moments
+        </div>
+
+        <h2 class="section-title">
+            Behind The Performance
+        </h2>
+
+        <div class="ornament">
+            <span>✦</span>
+        </div>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+            <img
+                src="img.jpg.jpeg"
+                alt="Indian dance performance"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="gallery-2.jpg"
+                alt="Indian dancer"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="gallery-3.jpg"
+                alt="Dance students"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="gallery-4.jpg"
+                alt="Dance performance"
+            >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img
+                src="gallery-5.jpg"
+                alt="Dance event"
+            >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     TESTIMONIAL
+===================================================== -->
+
+<section class="testimonials">
+
+    <div class="section-label">
+        Words From Our Community
+    </div>
+
+    <h2 class="section-title">
+        A Journey Worth Taking
+    </h2>
+
+    <div class="ornament">
+        <span>✦</span>
+    </div>
+
+    <div class="testimonial">
+
+        <p>
+            “An inspiring place to learn Indian dance,
+            build confidence and create beautiful memories.”
+        </p>
+
+        <span>
+            Student & Parent Community
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     EVENTS
+===================================================== -->
+
+<section class="events">
+
+    <div class="events-container">
+
+
+        <div>
+
+            <div class="section-label">
+                Performances & Events
+            </div>
+
+            <h2>
+                Experience The Stage
+            </h2>
+
+        </div>
+
+
+        <p>
+            From academy showcases to cultural celebrations,
+            our dancers have opportunities to share their
+            passion and artistry with an audience.
+        </p>
+
+
+        <a
+            href="gallery.html"
+            class="button button-outline"
+        >
+            View Events
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="cta">
+
+    <div class="section-label">
+        Your Dance Journey Begins Here
+    </div>
+
+    <h2>
+        Step Into<br>
+        The World Of Dance
+    </h2>
+
+    <p>
+        Discover your rhythm. Find your expression.
+        Become part of our dance family.
+    </p>
+
+    <a
+        href="contact.html"
+        class="button button-gold"
+    >
+        Enroll Now
+    </a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <div class="footer-logo">
+                SHAHANAZ
+            </div>
+
+            <p class="footer-description">
+                Indian dance education inspired by tradition,
+                grace, discipline and artistic expression.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Explore
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="home.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="programs.html">
+                        Programs
+                    </a>
+                </li>
+
+                <li>
+                    <a href="classes.html">
+                        Classes
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Academy
+            </h4>
+
+            <ul>
+
+                <li>
+                    <a href="gallery.html">
+                        Gallery
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Enrollment
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Connect
+            </h4>
+
+            <ul>
+
+                <li>
+                    Instagram
+                </li>
+
+                <li>
+                    Facebook
+                </li>
+
+                <li>
+                    WhatsApp
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 Shahanaz Indian Dance Academy.
+        All Rights Reserved.
+    </div>
+
+</footer>
+```
+
+</body>
+</html>

@@ -1,0 +1,1582 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Classes & Programs | Shahanaz Indian Dance Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    color:#f5eee3;
+    background:#080605;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   OVERALL DANCE BACKGROUND
+   ONLY 2 SLIDES
+===================================================== */
+
+.page-background{
+    position:fixed;
+    inset:-15px;
+    z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.bg-slide{
+    position:absolute;
+    inset:0;
+
+    background-repeat:no-repeat;
+
+    opacity:0;
+
+    filter:
+        blur(2px)
+        brightness(.42)
+        contrast(1.05)
+        saturate(.90);
+
+    transform:scale(1.02);
+
+    animation:danceBackground 6s infinite;
+}
+
+
+/* =====================================================
+   BACKGROUND PHOTO 1
+===================================================== */
+
+.bg-slide:nth-child(1){
+
+    background-image:url(
+        "https://i.pinimg.com/originals/fa/0b/a6/fa0ba6de3569835e704358b90b3a5b78.jpg"
+    );
+
+    background-size:cover;
+    background-position:center;
+
+    animation-delay:0s;
+}
+
+
+/* =====================================================
+   BACKGROUND PHOTO 2
+===================================================== */
+
+.bg-slide:nth-child(2){
+
+    background-image:url(
+        "https://www.jaihindhphotography.com/wp-content/uploads/2020/02/Bharatanatyam-Arangetram-131-662x1024.jpg"
+    );
+
+    /*
+       Keeps the portrait dancer from being
+       excessively zoomed/cropped.
+    */
+
+    background-size:auto 100%;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    animation-delay:3s;
+}
+
+
+/* =====================================================
+   TWO-SLIDE ANIMATION
+===================================================== */
+
+@keyframes danceBackground{
+
+    0%{
+        opacity:0;
+    }
+
+    8%{
+        opacity:1;
+    }
+
+    42%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:0;
+    }
+
+}
+
+
+/* DARK OVERLAY */
+
+.page-background::after{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(8,6,5,.45);
+}
+
+
+/* =====================================================
+   CONTENT LAYER
+===================================================== */
+
+.site-content{
+    position:relative;
+    z-index:2;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    width:100%;
+
+    padding:24px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(8,6,5,.70);
+
+    border-bottom:
+        1px solid
+        rgba(201,169,104,.25);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    position:sticky;
+    top:0;
+
+    z-index:100;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+
+    text-decoration:none;
+
+    color:#e2c27d;
+
+    line-height:1;
+}
+
+.logo-main{
+
+    font-family:'Cinzel',serif;
+
+    font-size:25px;
+
+    letter-spacing:4px;
+}
+
+.logo-sub{
+
+    display:block;
+
+    margin-top:7px;
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    color:#c9bda9;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:27px;
+}
+
+nav a{
+
+    color:#f4ecdf;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:500;
+
+    letter-spacing:1.5px;
+
+    transition:.3s;
+}
+
+nav a:hover{
+
+    color:#d8b86d;
+}
+
+
+/* =====================================================
+   ENROLL BUTTON
+===================================================== */
+
+.nav-enroll{
+
+    padding:11px 20px;
+
+    border:
+        1px solid
+        #c9a968;
+
+    color:#e4c982 !important;
+
+    background:transparent;
+
+    transition:.3s;
+}
+
+.nav-enroll:hover{
+
+    background:#c9a968;
+
+    color:#100c08 !important;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:
+        120px
+        20px
+        100px;
+
+    background:rgba(8,6,5,.25);
+}
+
+.hero-inner{
+
+    max-width:950px;
+}
+
+.hero-kicker{
+
+    font-family:'Montserrat',sans-serif;
+
+    font-size:11px;
+
+    letter-spacing:6px;
+
+    color:#d8bd82;
+
+    margin-bottom:25px;
+}
+
+.hero h1{
+
+    font-family:'Cinzel',serif;
+
+    font-size:
+        clamp(45px,7vw,90px);
+
+    font-weight:500;
+
+    letter-spacing:5px;
+
+    line-height:1.05;
+
+    color:#f5eee3;
+
+    text-shadow:
+        0 4px 25px
+        rgba(0,0,0,.6);
+}
+
+.hero-line{
+
+    width:90px;
+
+    height:1px;
+
+    background:#c9a968;
+
+    margin:32px auto;
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:23px;
+
+    line-height:1.7;
+
+    color:#ddd0bd;
+}
+
+
+/* =====================================================
+   COMMON SECTIONS
+===================================================== */
+
+section{
+
+    padding:
+        100px
+        7%;
+}
+
+.section-inner{
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-kicker{
+
+    color:#c9a968;
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    margin-bottom:16px;
+}
+
+.section-heading h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:42px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+}
+
+.section-heading p{
+
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:21px;
+
+    line-height:1.6;
+
+    color:#d7cbb9;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+
+    background:rgba(8,6,5,.54);
+}
+
+.intro-content{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.intro-content h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:40px;
+
+    font-weight:500;
+
+    color:#e4c982;
+
+    margin-bottom:25px;
+}
+
+.intro-content p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#e2d7c6;
+}
+
+
+/* =====================================================
+   PROGRAM CARDS
+===================================================== */
+
+.programs{
+
+    background:rgba(8,6,5,.48);
+}
+
+.program-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:24px;
+}
+
+.program-card{
+
+    padding:40px 30px;
+
+    min-height:300px;
+
+    background:
+        rgba(20,15,11,.68);
+
+    border:
+        1px solid
+        rgba(201,169,104,.30);
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+
+    transition:.4s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.program-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:2px;
+
+    background:#c9a968;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.4s;
+}
+
+.program-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:
+        rgba(201,169,104,.65);
+
+    background:
+        rgba(20,15,11,.82);
+}
+
+.program-card:hover::before{
+
+    transform:scaleX(1);
+}
+
+.program-number{
+
+    font-family:'Cinzel',serif;
+
+    font-size:14px;
+
+    color:#c9a968;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.program-card h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:23px;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+    color:#f2e6d4;
+}
+
+.program-card p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:19px;
+
+    line-height:1.6;
+
+    color:#cfc2af;
+}
+
+
+/* =====================================================
+   LEVELS
+===================================================== */
+
+.levels{
+
+    background:rgba(8,6,5,.58);
+}
+
+.level-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:25px;
+}
+
+.level{
+
+    text-align:center;
+
+    padding:45px 25px;
+
+    border:
+        1px solid
+        rgba(201,169,104,.27);
+
+    background:
+        rgba(16,12,9,.65);
+
+    backdrop-filter:blur(8px);
+
+    -webkit-backdrop-filter:blur(8px);
+}
+
+.level h3{
+
+    font-family:'Cinzel',serif;
+
+    color:#dfc17a;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+.level p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    color:#d2c6b4;
+}
+
+
+/* =====================================================
+   AGE PROGRAMS
+===================================================== */
+
+.age-programs{
+
+    background:rgba(8,6,5,.50);
+}
+
+.age-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:25px;
+}
+
+.age-box{
+
+    padding:35px;
+
+    background:
+        rgba(17,13,10,.68);
+
+    border-left:
+        2px solid
+        #c9a968;
+
+    backdrop-filter:blur(7px);
+
+    -webkit-backdrop-filter:blur(7px);
+}
+
+.age-box h3{
+
+    font-family:'Cinzel',serif;
+
+    font-size:24px;
+
+    color:#e0c17b;
+
+    margin-bottom:12px;
+}
+
+.age-box p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:19px;
+
+    line-height:1.6;
+
+    color:#d5c9b8;
+}
+
+
+/* =====================================================
+   SPECIAL TRAINING
+===================================================== */
+
+.special{
+
+    background:rgba(8,6,5,.60);
+}
+
+.special-inner{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:60px 40px;
+
+    border:
+        1px solid
+        rgba(201,169,104,.35);
+
+    background:
+        rgba(15,11,8,.70);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+}
+
+.special-inner h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:36px;
+
+    color:#e4c982;
+
+    margin-bottom:20px;
+}
+
+.special-inner p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:21px;
+
+    line-height:1.7;
+
+    color:#d9cdbb;
+
+    margin-bottom:30px;
+}
+
+
+/* =====================================================
+   ENQUIRY BUTTON
+===================================================== */
+
+.enquiry-button{
+
+    display:inline-block;
+
+    padding:16px 32px;
+
+    border:
+        1px solid
+        #c9a968;
+
+    color:#e4c982;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.enquiry-button:hover{
+
+    background:#c9a968;
+
+    color:#100c08;
+}
+
+
+/* =====================================================
+   ENQUIRY SECTION
+===================================================== */
+
+.enquiry{
+
+    background:rgba(8,6,5,.62);
+}
+
+.enquiry-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:70px 35px;
+
+    border:
+        1px solid
+        rgba(201,169,104,.4);
+
+    background:
+        rgba(16,12,9,.74);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+}
+
+.enquiry-box h2{
+
+    font-family:'Cinzel',serif;
+
+    font-size:40px;
+
+    color:#e5c77f;
+
+    margin-bottom:18px;
+}
+
+.enquiry-box p{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:21px;
+
+    color:#d8cdbc;
+
+    line-height:1.7;
+
+    max-width:650px;
+
+    margin:
+        0
+        auto
+        35px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    padding:45px 7%;
+
+    text-align:center;
+
+    background:rgba(5,4,3,.88);
+
+    border-top:
+        1px solid
+        rgba(201,169,104,.25);
+}
+
+.footer-logo{
+
+    font-family:'Cinzel',serif;
+
+    font-size:22px;
+
+    letter-spacing:4px;
+
+    color:#d9b96f;
+
+    margin-bottom:12px;
+}
+
+footer p{
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#9f9587;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1000px){
+
+    nav{
+        gap:15px;
+    }
+
+    nav a{
+        font-size:9px;
+    }
+
+    .program-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+    .level-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    header{
+
+        padding:20px 5%;
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:
+            12px
+            18px;
+    }
+
+    .hero{
+
+        min-height:65vh;
+
+        padding:
+            90px
+            20px
+            70px;
+    }
+
+    .hero h1{
+
+        font-size:42px;
+    }
+
+    .hero p{
+
+        font-size:20px;
+    }
+
+    section{
+
+        padding:
+            75px
+            5%;
+    }
+
+    .section-heading h2{
+
+        font-size:32px;
+    }
+
+    .program-grid,
+    .level-grid,
+    .age-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .program-card{
+
+        min-height:auto;
+    }
+
+    .special-inner,
+    .enquiry-box{
+
+        padding:
+            45px
+            25px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCE MOTION
+===================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    .bg-slide{
+        animation:none;
+    }
+
+    .bg-slide:nth-child(1){
+        opacity:1;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ONLY TWO BACKGROUND SLIDES
+===================================================== -->
+
+<div class="page-background">
+
+    <div class="bg-slide"></div>
+
+    <div class="bg-slide"></div>
+
+</div>
+
+
+<div class="site-content">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <a href="home.html" class="logo">
+
+        <span class="logo-main">
+            SHAHANAZ
+        </span>
+
+        <span class="logo-sub">
+            INDIAN DANCE ACADEMY
+        </span>
+
+    </a>
+
+
+    <nav>
+
+        <a href="home.html">
+            HOME
+        </a>
+
+        <a href="about.html">
+            ABOUT
+        </a>
+
+        <a href="programs.html">
+            PROGRAMS
+        </a>
+
+        <a href="classes.html">
+            CLASSES
+        </a>
+
+        <a href="gallery.html">
+            GALLERY
+        </a>
+
+        <a href="contact.html">
+            CONTACT
+        </a>
+
+        <a href="#enquiry" class="nav-enroll">
+            ENROLL
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-kicker">
+            SHAHANAZ INDIAN DANCE ACADEMY
+        </div>
+
+        <h1>
+            CLASSES &amp;<br>
+            PROGRAMS
+        </h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+            Structured training rooted in tradition,
+            refined through discipline, expression and artistry.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro">
+
+    <div class="section-inner">
+
+        <div class="intro-content">
+
+            <h2>
+                Learn With Purpose.
+            </h2>
+
+            <p>
+                At Shahanaz Indian Dance Academy, every student is guided
+                through a thoughtful journey of rhythm, movement,
+                expression and traditional technique. Our programs are
+                designed to build confidence while preserving the beauty
+                and authenticity of Indian classical dance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROGRAMS
+===================================================== -->
+
+<section class="programs">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                OUR PROGRAMS
+            </div>
+
+            <h2>
+                Training For Every Journey
+            </h2>
+
+            <p>
+                Whether beginning your first steps or preparing for the
+                stage, our programs offer structured learning for every level.
+            </p>
+
+        </div>
+
+
+        <div class="program-grid">
+
+
+            <div class="program-card">
+
+                <div class="program-number">
+                    01
+                </div>
+
+                <h3>
+                    Beginners
+                </h3>
+
+                <p>
+                    A gentle introduction to posture, basic movements,
+                    rhythm, hand gestures and foundational expressions.
+                </p>
+
+            </div>
+
+
+            <div class="program-card">
+
+                <div class="program-number">
+                    02
+                </div>
+
+                <h3>
+                    Intermediate
+                </h3>
+
+                <p>
+                    Develop stronger technique, rhythm, coordination,
+                    repertoire and expressive performance skills.
+                </p>
+
+            </div>
+
+
+            <div class="program-card">
+
+                <div class="program-number">
+                    03
+                </div>
+
+                <h3>
+                    Advanced
+                </h3>
+
+                <p>
+                    Intensive training for dancers seeking deeper
+                    understanding, refinement and stage confidence.
+                </p>
+
+            </div>
+
+
+            <div class="program-card">
+
+                <div class="program-number">
+                    04
+                </div>
+
+                <h3>
+                    Kids' Programs
+                </h3>
+
+                <p>
+                    Age-appropriate dance education that develops
+                    discipline, creativity, confidence and appreciation
+                    for Indian culture.
+                </p>
+
+            </div>
+
+
+            <div class="program-card">
+
+                <div class="program-number">
+                    05
+                </div>
+
+                <h3>
+                    Adult Programs
+                </h3>
+
+                <p>
+                    Flexible learning for adults who wish to discover,
+                    reconnect with or deepen their passion for Indian dance.
+                </p>
+
+            </div>
+
+
+            <div class="program-card">
+
+                <div class="program-number">
+                    06
+                </div>
+
+                <h3>
+                    Performance Training
+                </h3>
+
+                <p>
+                    Focused preparation in choreography, expression,
+                    stage presence and performance presentation.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     LEVELS
+===================================================== -->
+
+<section class="levels">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                LEARNING PATH
+            </div>
+
+            <h2>
+                Progress With Confidence
+            </h2>
+
+            <p>
+                Each level builds naturally upon the previous one,
+                allowing students to grow at a comfortable and meaningful pace.
+            </p>
+
+        </div>
+
+
+        <div class="level-grid">
+
+
+            <div class="level">
+
+                <h3>
+                    Foundation
+                </h3>
+
+                <p>
+                    Learn the essential vocabulary of Indian classical dance,
+                    including posture, rhythm, basic steps and gestures.
+                </p>
+
+            </div>
+
+
+            <div class="level">
+
+                <h3>
+                    Development
+                </h3>
+
+                <p>
+                    Strengthen technique, musicality and expression while
+                    expanding your repertoire and understanding.
+                </p>
+
+            </div>
+
+
+            <div class="level">
+
+                <h3>
+                    Mastery
+                </h3>
+
+                <p>
+                    Refine performance quality, artistry and interpretation
+                    through advanced and dedicated training.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AGE PROGRAMS
+===================================================== -->
+
+<section class="age-programs">
+
+    <div class="section-inner">
+
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                FOR EVERY AGE
+            </div>
+
+            <h2>
+                A Place To Learn &amp; Grow
+            </h2>
+
+        </div>
+
+
+        <div class="age-grid">
+
+
+            <div class="age-box">
+
+                <h3>
+                    Children
+                </h3>
+
+                <p>
+                    Fun, structured classes that introduce children to
+                    Indian classical dance while encouraging discipline,
+                    creativity and self-expression.
+                </p>
+
+            </div>
+
+
+            <div class="age-box">
+
+                <h3>
+                    Teenagers
+                </h3>
+
+                <p>
+                    Focused training for developing dancers who want to
+                    strengthen their technique and explore performance.
+                </p>
+
+            </div>
+
+
+            <div class="age-box">
+
+                <h3>
+                    Adults
+                </h3>
+
+                <p>
+                    Welcoming classes for beginners and experienced dancers,
+                    with learning paced according to individual goals.
+                </p>
+
+            </div>
+
+
+            <div class="age-box">
+
+                <h3>
+                    Dedicated Performers
+                </h3>
+
+                <p>
+                    Intensive guidance for students preparing for recitals,
+                    stage performances and significant milestones.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SPECIAL TRAINING
+===================================================== -->
+
+<section class="special">
+
+    <div class="section-inner">
+
+        <div class="special-inner">
+
+            <div class="section-kicker">
+                SPECIAL TRAINING
+            </div>
+
+            <h2>
+                Performance &amp; Stage Preparation
+            </h2>
+
+            <p>
+                For students preparing for performances, our focused
+                training develops choreography, expression, musicality,
+                stage presence and confidence.
+            </p>
+
+            <a href="#enquiry" class="enquiry-button">
+                ENQUIRE ABOUT CLASSES
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ENROLL / ENQUIRY
+===================================================== -->
+
+<section class="enquiry" id="enquiry">
+
+    <div class="section-inner">
+
+        <div class="enquiry-box">
+
+            <div class="section-kicker">
+                BEGIN YOUR JOURNEY
+            </div>
+
+            <h2>
+                Enquire About Classes
+            </h2>
+
+            <p>
+                Interested in joining Shahanaz Indian Dance Academy?
+                Get in touch to learn about available classes,
+                programs and enrollment.
+            </p>
+
+            <a
+                href="mailto:your-email@example.com?subject=Enquiry%20About%20Dance%20Classes"
+                class="enquiry-button"
+            >
+                SEND AN ENQUIRY
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        SHAHANAZ
+    </div>
+
+    <p>
+        INDIAN DANCE ACADEMY
+    </p>
+
+</footer>
+
+
+</div>
+
+
+</body>
+</html>
